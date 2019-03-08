@@ -17,8 +17,8 @@ result maxVal(int cap, knapsack *items) {
 
 	printf("%d\n",cap);
 
-  if(cap == 0){
-    for(int j=0; j < 10; j++)
+  if(capSmallest(cap,items)){
+    for(int j=0; j < ITEMS; j++)
       best.counts[j] = 0;
 		if(check(items) == 1)
       zeroFlag = 1;

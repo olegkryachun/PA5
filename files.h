@@ -31,3 +31,4 @@ void init();
 
 void sums(int *,int *);
 int check(knapsack *);
+int capSmallest(int, knapsack *);
