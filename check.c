@@ -3,13 +3,19 @@
 
 int check(knapsack *items){
 
-	int flag = 0, j;
-	int i = (CAP%items[0].weight);	//take the initial capcity and check the remainder with the weight of the best value/pound item
-	if(i == 0) return 1;		//if the remainder is zero then the best solution is to fill the bag with only the best value/pound item
+	int flag = 0, j, i, rem;
+
+	for(i=0; i<ITEMS-1; i++){
+		if(CAP >= items[i].weight)
+			break;
+	}
+
+	rem = (CAP%items[i].weight);	//take the initial capcity and check the remainder with the weight of the best value/pound item
+	if(rem == 0) return 1;		//if the remainder is zero then the best solution is to fill the bag with only the best value/pound item
 
 //check if there is a matching weight to the remainder that would be added next
 	for(j = 0; j < ITEMS-1; j++){
-		if(i == items[j].weight){
+		if(rem == items[j].weight){
 			flag = 1;
 			break;	//if there is then break out of this loop and set the flag
 		}

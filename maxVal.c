@@ -17,6 +17,7 @@ result maxVal(int cap, knapsack *items) {
     return(best);
   }
 
+	printf("%d\n",cap);
 //Check if the current weight is smaller than the rest of the weight (can't add any more items)
   if(capSmallest(cap,items)){
 	//if so then we have reached the end of this current recursion so return zero array and zero value
@@ -28,7 +29,7 @@ result maxVal(int cap, knapsack *items) {
   }
 
 //traverse through each item on the list
-  for(int i=0 ; i< ITEMS-1; i++) {
+  for(int i=0 ; i<= ITEMS-1; i++) {
     if(cap >= items[i].weight) {	//if the item can fit
       result temp = maxVal((cap - items[i].weight), items);		//get the maximum value of the left over weight
       if((items[i].value + temp.value) > best.value) {	//if the max value is better than the already stored max value then update best max
