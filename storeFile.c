@@ -4,6 +4,7 @@
 
 void storeFile(knapsack *data){
 
+//read from a file and store into data knapsack array
 	FILE *fp;
 	char string[128];
 	int i = 0;
@@ -14,8 +15,10 @@ void storeFile(knapsack *data){
 		i++;
 	}
 
+//set global value for the number of items on the list
 	ITEMS = i;
 
+//bubble sort the item list by best value/pound
 	for(int j = 0; j < ITEMS - 1; j++ ) {
 
 		for(i=0; i< ITEMS-j-1 ; i++){
