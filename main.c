@@ -1,3 +1,21 @@
+/*
+Creators: Oleg Kryachun & Nate Kirsh
+Date: March 8 2019
+Programming Assignment 5
+CSE 222
+Things We Did Together: We spend several hours brainstorming and piecing the program together, the way the alorithm would would and creating an outline.
+												This was very helpful as we were able to view the problem from different perspectives and quickly find flaws and strengths in different proposed solutions
+
+Oleg's Role: Read and Store from file, I got the idea to store the array in order from best value/pound to least, I tackled a lot of the little functions,
+						 as well as managed to debug the program to get the final working solution
+
+Nate's Role: Put together the initial outline for the Max functions, wrote the max function that almost worked perfectly,
+							edited the main program to adjust output formatting, wrote the bubble sort algarithm, created the Makefile
+
+Summary: This program gets a weight value from the user and finds the maximum value possible to store into the sack that can store a maximum of the given weight
+					it does recursively. The list of items gets stored in order by best value/pound to least value/pound allowing the program to decide to either go through
+					full recursion of if the weight fits a value such that only the number of best value/pound items will create the best value for the weight.
+*/
 
 #include <stdio.h>
 #include "files.h"
